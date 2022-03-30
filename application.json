@@ -1,0 +1,21 @@
+{
+  "isPublic": false,
+  "viewMode": false,
+  "appIsExample": false,
+  "unreadCommentThreads": 0,
+  "color": "#C2DAF0",
+  "icon": "laptop",
+  "slug": "nlp-project-onboarding",
+  "unpublishedAppLayout": {
+    "type": "FLUID"
+  },
+  "publishedAppLayout": {
+    "type": "FLUID"
+  },
+  "evaluationVersion": 2,
+  "createdAt": {
+    "seconds": 1648534593,
+    "nanos": 442000000
+  },
+  "deleted": false
+}
