@@ -13,7 +13,11 @@
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },
-    "Onboarding Form_Query2": {
+    "Onboarding Form_Insert_data": {
+      "unpublishedUserSetOnLoad": false,
+      "publishedUserSetOnLoad": false
+    },
+    "Onboarding Form_describe_table": {
       "unpublishedUserSetOnLoad": false,
       "publishedUserSetOnLoad": false
     },

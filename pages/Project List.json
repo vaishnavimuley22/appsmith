@@ -55,9 +55,6 @@
               ],
               "dynamicBindingPathList": [
                 {
-                  "key": "tableData"
-                },
-                {
                   "key": "primaryColumns.userId.computedValue"
                 },
                 {
@@ -80,6 +77,9 @@
                 },
                 {
                   "key": "primaryColumns.customColumn1.buttonLabel"
+                },
+                {
+                  "key": "tableData"
                 }
               ],
               "leftColumn": 1,

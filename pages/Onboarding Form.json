@@ -8,7 +8,7 @@
         "dsl": {
           "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 816,
+          "rightColumn": 912,
           "snapColumns": 64,
           "detachFromLayout": true,
           "widgetId": "0",
@@ -285,7 +285,7 @@
                       "type": "SELECT_WIDGET",
                       "serverSideFiltering": false,
                       "hideCard": false,
-                      "defaultOptionValue": "GREEN",
+                      "defaultOptionValue": "",
                       "animateLoading": true,
                       "parentColumnSpace": 13.875,
                       "dynamicTriggerPathList": [],
@@ -305,7 +305,7 @@
                           "value": "RED"
                         }
                       ],
-                      "placeholderText": "Select option",
+                      "placeholderText": "Validation type for project",
                       "isDisabled": false,
                       "key": "xeu6vxxmrd",
                       "isRequired": false,
@@ -687,7 +687,7 @@
                     {
                       "resetFormOnClick": true,
                       "widgetName": "FormButton1",
-                      "onClick": "{{showModal('Modal1')}}",
+                      "onClick": "{{Insert_data.run(() => showAlert('Form Submitted successfully'), () => save_data.run())}}",
                       "buttonColor": "#03b365",
                       "displayName": "FormButton",
                       "iconSVG": "/static/media/icon.c8f649ed.svg",
