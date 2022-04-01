@@ -8,7 +8,7 @@
         "dsl": {
           "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 912,
+          "rightColumn": 400,
           "snapColumns": 64,
           "detachFromLayout": true,
           "widgetId": "0",
@@ -783,7 +783,7 @@
                       "widgetName": "Input1",
                       "displayName": "Input",
                       "iconSVG": "/static/media/icon.9f505595.svg",
-                      "onSubmit": "{{Query1.run()}}",
+                      "onSubmit": "",
                       "topRow": 18,
                       "bottomRow": 22,
                       "parentRowSpace": 10,

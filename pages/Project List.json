@@ -8,19 +8,19 @@
         "dsl": {
           "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 912,
+          "rightColumn": 400,
           "snapColumns": 64,
           "detachFromLayout": true,
           "widgetId": "0",
           "topRow": 0,
-          "bottomRow": 670,
+          "bottomRow": 690,
           "containerStyle": "none",
           "snapRows": 67,
           "parentRowSpace": 1,
           "type": "CANVAS_WIDGET",
           "canExtend": true,
           "version": 53,
-          "minHeight": 680,
+          "minHeight": 580,
           "parentColumnSpace": 1,
           "dynamicBindingPathList": [],
           "leftColumn": 0,
@@ -29,10 +29,18 @@
               "widgetName": "Table1",
               "defaultPageSize": 0,
               "columnOrder": [
-                "userId",
-                "id",
-                "title",
-                "completed",
+                "project_key_pdf",
+                "client_key",
+                "validation_type",
+                "project_key",
+                "telehealth",
+                "epifinal_check",
+                "blood_pressure",
+                "project_name",
+                "datarap_rules",
+                "blood_mass",
+                "coding_type",
+                "email",
                 "customColumn1"
               ],
               "isVisibleDownload": true,
@@ -40,7 +48,7 @@
               "displayName": "Table",
               "iconSVG": "/static/media/icon.db8a9cbd.svg",
               "topRow": 1,
-              "bottomRow": 64,
+              "bottomRow": 67,
               "isSortable": true,
               "parentRowSpace": 10,
               "type": "TABLE_WIDGET",
@@ -55,18 +63,6 @@
               ],
               "dynamicBindingPathList": [
                 {
-                  "key": "primaryColumns.userId.computedValue"
-                },
-                {
-                  "key": "primaryColumns.id.computedValue"
-                },
-                {
-                  "key": "primaryColumns.title.computedValue"
-                },
-                {
-                  "key": "primaryColumns.completed.computedValue"
-                },
-                {
                   "key": "derivedColumns.customColumn1.menuButtonLabel"
                 },
                 {
@@ -80,78 +76,46 @@
                 },
                 {
                   "key": "tableData"
+                },
+                {
+                  "key": "primaryColumns.project_key_pdf.computedValue"
+                },
+                {
+                  "key": "primaryColumns.client_key.computedValue"
+                },
+                {
+                  "key": "primaryColumns.validation_type.computedValue"
+                },
+                {
+                  "key": "primaryColumns.project_key.computedValue"
+                },
+                {
+                  "key": "primaryColumns.telehealth.computedValue"
+                },
+                {
+                  "key": "primaryColumns.epifinal_check.computedValue"
+                },
+                {
+                  "key": "primaryColumns.blood_pressure.computedValue"
+                },
+                {
+                  "key": "primaryColumns.project_name.computedValue"
+                },
+                {
+                  "key": "primaryColumns.datarap_rules.computedValue"
+                },
+                {
+                  "key": "primaryColumns.blood_mass.computedValue"
+                },
+                {
+                  "key": "primaryColumns.coding_type.computedValue"
+                },
+                {
+                  "key": "primaryColumns.email.computedValue"
                 }
               ],
               "leftColumn": 1,
               "primaryColumns": {
-                "userId": {
-                  "index": 0,
-                  "width": 150,
-                  "id": "userId",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textSize": "PARAGRAPH",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isDisabled": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "userId",
-                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.userId))}}"
-                },
-                "id": {
-                  "index": 1,
-                  "width": 150,
-                  "id": "id",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textSize": "PARAGRAPH",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isDisabled": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "id",
-                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.id))}}"
-                },
-                "title": {
-                  "index": 2,
-                  "width": 150,
-                  "id": "title",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textSize": "PARAGRAPH",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isDisabled": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "title",
-                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.title))}}"
-                },
-                "completed": {
-                  "index": 3,
-                  "width": 150,
-                  "id": "completed",
-                  "horizontalAlignment": "LEFT",
-                  "verticalAlignment": "CENTER",
-                  "columnType": "text",
-                  "textSize": "PARAGRAPH",
-                  "enableFilter": true,
-                  "enableSort": true,
-                  "isVisible": true,
-                  "isDisabled": false,
-                  "isCellVisible": true,
-                  "isDerived": false,
-                  "label": "completed",
-                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.completed))}}"
-                },
                 "customColumn1": {
                   "index": 4,
                   "width": 150,
@@ -173,6 +137,210 @@
                   "menuButtonLabel": "{{Table1.sanitizedTableData.map((currentRow) => ( 'Open Menu'))}}",
                   "buttonLabel": "{{Table1.sanitizedTableData.map((currentRow) => ( 'View Full Details'))}}",
                   "onClick": "{{showModal('Modal1')}}"
+                },
+                "project_key_pdf": {
+                  "index": 0,
+                  "width": 150,
+                  "id": "project_key_pdf",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "project_key_pdf",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.project_key_pdf))}}"
+                },
+                "client_key": {
+                  "index": 1,
+                  "width": 150,
+                  "id": "client_key",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "client_key",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.client_key))}}"
+                },
+                "validation_type": {
+                  "index": 2,
+                  "width": 150,
+                  "id": "validation_type",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "validation_type",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.validation_type))}}"
+                },
+                "project_key": {
+                  "index": 3,
+                  "width": 150,
+                  "id": "project_key",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "project_key",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.project_key))}}"
+                },
+                "telehealth": {
+                  "index": 4,
+                  "width": 150,
+                  "id": "telehealth",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "telehealth",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.telehealth))}}"
+                },
+                "epifinal_check": {
+                  "index": 5,
+                  "width": 150,
+                  "id": "epifinal_check",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "epifinal_check",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.epifinal_check))}}"
+                },
+                "blood_pressure": {
+                  "index": 6,
+                  "width": 150,
+                  "id": "blood_pressure",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "blood_pressure",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.blood_pressure))}}"
+                },
+                "project_name": {
+                  "index": 7,
+                  "width": 150,
+                  "id": "project_name",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "project_name",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.project_name))}}"
+                },
+                "datarap_rules": {
+                  "index": 8,
+                  "width": 150,
+                  "id": "datarap_rules",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "datarap_rules",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.datarap_rules))}}"
+                },
+                "blood_mass": {
+                  "index": 9,
+                  "width": 150,
+                  "id": "blood_mass",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "blood_mass",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.blood_mass))}}"
+                },
+                "coding_type": {
+                  "index": 10,
+                  "width": 150,
+                  "id": "coding_type",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "coding_type",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.coding_type))}}"
+                },
+                "email": {
+                  "index": 11,
+                  "width": 150,
+                  "id": "email",
+                  "horizontalAlignment": "LEFT",
+                  "verticalAlignment": "CENTER",
+                  "columnType": "text",
+                  "textSize": "PARAGRAPH",
+                  "enableFilter": true,
+                  "enableSort": true,
+                  "isVisible": true,
+                  "isDisabled": false,
+                  "isCellVisible": true,
+                  "isDerived": false,
+                  "label": "email",
+                  "computedValue": "{{Table1.sanitizedTableData.map((currentRow) => ( currentRow.email))}}"
                 }
               },
               "delimiter": ",",
@@ -204,7 +372,7 @@
               "textSize": "PARAGRAPH",
               "widgetId": "x4ecui3idk",
               "isVisibleFilters": true,
-              "tableData": "{{get_data.data}}",
+              "tableData": "{{Get_Data.data.Items}}",
               "isVisible": true,
               "label": "Data",
               "searchKey": "",
@@ -569,10 +737,10 @@
         "layoutOnLoadActions": [
           [
             {
-              "id": "Project List_get_data",
-              "name": "get_data",
+              "id": "Project List_Get_Data",
+              "name": "Get_Data",
               "confirmBeforeExecute": false,
-              "pluginType": "API",
+              "pluginType": "DB",
               "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
             }

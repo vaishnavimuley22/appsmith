@@ -2,7 +2,7 @@
   "pluginType": "DB",
   "pluginId": "dynamo-plugin",
   "unpublishedAction": {
-    "name": "describe_table",
+    "name": "Get_Item",
     "datasource": {
       "pluginId": "dynamo-plugin",
       "messages": [],
@@ -16,9 +16,9 @@
     "actionConfiguration": {
       "timeoutInMillisecond": 10000,
       "paginationType": "NONE",
-      "path": "DescribeTable",
+      "path": "GetItem",
       "encodeParamsToggle": true,
-      "body": "{\n   \"TableName\": \"appsmith\"\n}"
+      "body": "{\n    \"TableName\" : \"appsmith\",\n\t\t\"Key\": {\n        \"project_key\" : {\n            \"S\" : \"1\"\n        }\n    }\n}"
     },
     "executeOnLoad": false,
     "dynamicBindingPathList": [],
@@ -31,7 +31,7 @@
     "policies": [],
     "userPermissions": []
   },
-  "id": "Onboarding Form_describe_table",
+  "id": "Onboarding Form_Get_Item",
   "deleted": false,
-  "gitSyncId": "6242a4411b25905fabd2aae5_624456041b25905fabd2ab4f"
+  "gitSyncId": "6242a4411b25905fabd2aae5_62469d361b25905fabd2ab55"
 }
